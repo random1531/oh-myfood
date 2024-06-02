@@ -32,12 +32,14 @@
 
 }
 .restaurant {
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     height:auto;
-    align-items: center;
+    
     justify-content: center;
-    width: 100%;
+    width: 91%;
+    background-color:rgba(246, 246, 246, 1)
     h2 {
         height: 68px;
 

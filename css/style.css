@@ -126,6 +126,88 @@ footer a {
   color: white;
 }
 
+.resto {
+  max-width: 100%;
+  position: absolute;
+  top: 63px;
+  z-index: 0;
+}
+
+.main_contenaire_resto {
+  top: 315px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menuliste {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(246, 246, 246);
+  top: 315px;
+  position: relative;
+  width: 100%;
+}
+
+.entre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.li {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  background: rgb(255, 255, 255);
+  height: 69px;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.xxx {
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 42px;
+  gap: 5px;
+}
+
+.menucheck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 59px;
+  height: 69px;
+  background: rgb(153, 226, 208);
+  border-radius: 0px 15px 15px 0px;
+  margin-right: -59px;
+  opacity: 1;
+}
+
+.menucheck:hover {
+  margin-right: 0;
+  opacity: 1;
+  display: flex;
+}
+
+.main_contenaire {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
 .info {
   width: 100%;
   background-color: rgb(246, 246, 246);
@@ -291,14 +373,14 @@ footer a {
 }
 
 .restaurant {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   height: auto;
-  align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 91%;
 }
-.restaurant h2 {
+.restaurant background-color:rgba(246, 246, 246, 1) h2 {
   height: 68px;
   font-size: 24px;
   font-weight: 700;

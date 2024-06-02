@@ -1,3 +1,13 @@
+
+.main_contenaire{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom:60px ;
+}
+
 .info{
 width: 100%;
 background-color:rgba(246, 246, 246, 1) ;
