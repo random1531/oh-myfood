@@ -1,36 +1,14 @@
-.fa-heart {
-    position: absolute;
-    right: 40px;
-    
-}
 
-.cls{
-    background: -webkit-linear-gradient(193.33deg,  #9356dc -11.44%, #ff79da 123.93%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-}
-
-.fa-solid {
-  opacity: 0;  
+// .fa-solid {
+//   opacity: 0;  
     
-    // transform: var(--maincolorgradiant);
-    // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+//     // transform: var(--maincolorgradiant);
+//     // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     
    
-}
-.fa-regular {
-    opacity: 1;
-}
+// }
 
-.fa-regular:hover {
-    opacity: 0;
-}
-.fa-solid:hover {
-    opacity: 1;
-    
 
-}
 .restaurant {
     padding-top: 30px;
     display: flex;
@@ -78,7 +56,60 @@
             height: 251px;
             object-fit: cover;
             border-radius: 0px 0px 15px 15px;
+
         }
+        .fa-solid {
+            opacity: 0;  
+              
+              // transform: var(--maincolorgradiant);
+              // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+                    
+          }
+          .fa-regular {
+            opacity: 1;
+        }
+        
+        .fa-regular:hover {
+            opacity: 0;
+        }
+        .fa-solid:hover {
+            opacity: 1;
+            animation: bounce 1s ease 0s 1 normal both;
+            transform: scale(1.5);
+
+            @keyframes bounce {
+                0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0px);
+                }
+                40% {
+                    transform: translateY(-15px);
+                }
+                60% {
+                    transform: translateY(-10px);
+                }
+
+                100%{
+                    transform: translateY(0px);
+                }
+            }
+        }
+        
+        
+        }
+        .fa-heart {
+            position: absolute;
+            right: 40px;
+            
+            
+        }
+        
+        .cls{
+            background: -webkit-linear-gradient(193.33deg,  #9356dc -11.44%, #ff79da 123.93%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+        }
+        
     }
     .img-restaurent {
         width: 100%;
@@ -113,4 +144,3 @@
             text-align: left;
         }
     }
-}
