@@ -70,6 +70,7 @@
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
 body {
@@ -384,6 +385,12 @@ footer a {
   margin-right: -59px;
 }
 
+.menucheck i {
+  border-color: white;
+  background: white;
+  border-radius: 15px;
+}
+
 .li:hover .menucheck {
   margin-right: 0;
   opacity: 1;
@@ -437,6 +444,10 @@ footer a {
   }
 }
 
+.fa-check {
+  color: rgb(153, 226, 208);
+}
+
 .btn_resto {
   display: flex;
   align-items: center;
@@ -445,6 +456,7 @@ footer a {
 
 .li:hover .fa-circle-check {
   animation: rotate 1s ease-in-out;
+  color: rgb(153, 226, 208);
 }
 
 @keyframes rotate {
