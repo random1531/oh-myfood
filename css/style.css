@@ -16,6 +16,22 @@ body a {
 body a, body p, body h1, body h3, body h2 {
   margin: 0;
 }
+body .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  color: white;
+}
 body .text1 {
   font-family: Roboto;
   font-size: 16px;
@@ -186,7 +202,7 @@ footer a {
 .Title_menu {
   font-family: Roboto;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 21.09px;
   text-align: left;
 }
@@ -302,8 +318,8 @@ footer a {
   margin-right: 0;
   opacity: 1;
   display: flex;
-  animation: slide-left 3s ease 0 3 normal both;
-  transition: margin-right 0.5s ease, opacity 0.5s ease;
+  animation: slide-left 6s ease 0 1 normal both;
+  transition: margin-right 1s ease, opacity 1s ease;
 }
 @keyframes slide-left {
   0% {
@@ -323,6 +339,61 @@ footer a {
   }
 }
 
+.li:not(:hover) .menucheck {
+  margin-right: 0;
+  opacity: 1;
+  display: flex;
+  animation: slide-right 0.5s ease backwards;
+  transition: margin-left 1s ease, opacity 1s ease;
+  margin-right: -59px;
+  opacity: 0;
+  margin-right: -59px;
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(-59px);
+  }
+  25% {
+    transform: translateX(-35px);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  75% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.btn_resto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.li:hover .fa-circle-check {
+  animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .li:hover .test {
   width: 65%;
 }
@@ -355,7 +426,7 @@ footer a {
 .info p {
   width: 84%;
 }
-.info a {
+.info .btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,40 +515,6 @@ footer a {
   line-height: 16.62px;
 }
 
-@media (min-width: 767.98px) {
-  .info h1 {
-    font-family: Roboto;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 46.88px;
-    text-align: center;
-  }
-  .info p {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21.09px;
-    text-align: center;
-  }
-  .fonctionement .fonctionnement-contenair {
-    flex-direction: row;
-    width: 80%;
-    justify-content: space-between;
-  }
-  .fonctionement .fonctionnement-contenair-card {
-    width: 30.6%;
-  }
-  .fonctionement h2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .restaurant {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
 .restaurant {
   padding-top: 30px;
   display: flex;
@@ -501,7 +538,6 @@ footer a {
   justify-content: center;
   gap: 18px;
   width: 100%;
-  height: 1058px;
 }
 .restaurant .restaurant-contenaire a {
   display: flex;
@@ -566,6 +602,7 @@ footer a {
   width: 100%;
   height: 174px;
   border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
 }
 
 .contenaire-card-info {
@@ -594,6 +631,141 @@ footer a {
   font-weight: 300;
   line-height: 19.92px;
   text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .info h1 {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.88px;
+    text-align: center;
+  }
+  .info p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center;
+  }
+  .fonctionement .fonctionnement-contenair {
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+  }
+  .fonctionement .fonctionnement-contenair-card {
+    width: 30.6%;
+  }
+  .fonctionement h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .restaurant .restaurant-contenaire {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurant .restaurant-contenaire a {
+    width: 43%;
+  }
+  .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
+    width: 100%;
+  }
+  .menuliste {
+    width: 80%;
+    align-items: center;
+  }
+  .menuliste .entre {
+    width: 60%;
+  }
+  .name_resto {
+    position: relative;
+    width: 55%;
+  }
+  footer {
+    flex-direction: row;
+    height: 114px;
+    align-items: end;
+  }
+  nav ul {
+    flex-direction: row;
+    align-items: end;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .info h1 {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46.88px;
+    text-align: center;
+  }
+  .info p {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.09px;
+    text-align: center;
+  }
+  .fonctionement .fonctionnement-contenair {
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .fonctionement .fonctionnement-contenair-card {
+    width: 45%;
+  }
+  .fonctionement .fonctionnement-contenair-card h3 {
+    width: auto;
+  }
+  h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .restaurant .restaurant-contenaire {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurant .restaurant-contenaire a {
+    width: 47%;
+  }
+  .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
+    width: 100%;
+  }
+  footer {
+    flex-direction: row;
+    height: 114px;
+    align-items: end;
+  }
+  nav ul {
+    flex-direction: row;
+    align-items: end;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

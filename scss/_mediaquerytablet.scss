@@ -1,0 +1,89 @@
+@media  (min-width: 768px) and (max-width: 1024px) {
+   
+    .info{
+
+        h1{
+            font-family: Roboto;
+font-size: 40px;
+font-weight: 700;
+line-height: 46.88px;
+text-align: center;
+
+        }
+        p{
+           
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 21.09px;
+            text-align: center;
+            
+        }
+         
+}
+
+    .fonctionement{
+       
+        .fonctionnement-contenair{
+            flex-direction: row;
+            width: 80%;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;}
+            .fonctionnement-contenair-card{
+                width: 45%;
+
+                h3{
+                width: auto;
+                }
+            }
+           
+        }
+      
+        h2{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+        }
+        .restaurant{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+    
+            .restaurant-contenaire{
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 40px;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+    
+                a{
+                    width: 47%;
+                .restaurant-contenaire-card{
+                    width: 100%;
+                   
+                }
+            }
+            }
+            
+        }
+        footer{
+            flex-direction: row;
+            height: 114px;
+            align-items: end;
+        
+        } nav ul{
+            flex-direction: row;
+            align-items: end;
+        
+    }
+    }
+
+    
+
+    
+   

@@ -73,7 +73,7 @@
     .Title_menu{
         font-family: Roboto;
 font-size: 18px;
-font-weight: 500;
+font-weight: 700;
 line-height: 21.09px;
 text-align: left;
 // position: relative;
@@ -206,8 +206,9 @@ overflow: hidden;
     margin-right: 0;
     opacity: 1;
     display: flex;
-    animation: slide-left 3s ease 0 3 normal both;
-    transition: margin-right 0.5s ease, opacity 0.5s ease;
+    animation: slide-left 6s ease 0 1 normal both;
+    transition: margin-right 1s ease, opacity 1s ease;
+   
 
     @keyframes slide-left{
         0% {
@@ -226,8 +227,73 @@ overflow: hidden;
             transform: translateX(-59px);
         }
     }
+    
+   
+}
+.li:not(:hover) .menucheck {
+    margin-right: 0;
+    opacity: 1;
+    display: flex;
+    animation: slide-right 0.5s ease backwards;
+    transition: margin-left 1s ease, opacity 1s ease;
+    margin-right: -59px;
+    opacity: 0;
+    margin-right: -59px; 
+   
+
+    @keyframes slide-right{
+        0% {
+            transform: translateX(-59px);
+        }
+        25%{
+            transform: translateX(-35px);
+        }
+        50% {
+            transform: translateX(-25px);
+        }
+        75% {
+            transform: translateX(-15px);
+        }
+        100% {
+            transform: translateX(-0px);
+        }
+    }
+    
+   
 }
 
+.btn_resto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.li:hover .fa-circle-check{
+    animation: rotate 1s ease-in-out;
+    
+}
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+
+        25%{
+            transform: rotate(45deg);
+        }
+
+        50%{
+            transform: rotate(90deg);
+        }
+
+        75%{
+            transform: rotate(180deg);
+        }
+
+        100%{
+            transform: rotate(360deg);
+        }
+        
+    }
 
 
 .li:hover .test {
