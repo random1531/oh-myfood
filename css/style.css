@@ -52,7 +52,7 @@
     filter: blur(12px) opacity(0%);
   }
 }
-.fa-utensils {
+.loading {
   font-size: 72px;
   background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
@@ -214,6 +214,11 @@ footer a {
   color: white;
 }
 
+.entre {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
 .header_resto {
   display: flex;
   flex-direction: column;
@@ -335,6 +340,19 @@ footer a {
   width: 40px;
 }
 
+.checkbox1:checked + label .menucheck {
+  background: green;
+}
+
+.checkbox1:checked + label .fa-circle-check {
+  color: white;
+}
+
+.checkbox1 {
+  height: 100%;
+  margin: 0;
+}
+
 .li {
   justify-content: space-between;
   display: flex;
@@ -344,6 +362,11 @@ footer a {
   height: 69px;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  overflow: hidden;
+}
+
+.li:hover:checked .checkbox1 {
+  appearance: none;
 }
 
 .test {
@@ -372,7 +395,7 @@ footer a {
   z-index: 3;
 }
 
-.menucheck {
+.li .menucheck {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,8 +404,8 @@ footer a {
   background: rgb(153, 226, 208);
   border-radius: 0px 15px 15px 0px;
   margin-right: -59px;
-  opacity: 0;
-  margin-right: -59px;
+  position: relative;
+  transition: margin 1s ease;
 }
 
 .menucheck i {
@@ -393,55 +416,8 @@ footer a {
 
 .li:hover .menucheck {
   margin-right: 0;
-  opacity: 1;
   display: flex;
-  animation: slide-left 6s ease 0 1 normal both;
-  transition: margin-right 1s ease, opacity 1s ease;
-}
-@keyframes slide-left {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-25px);
-  }
-  50% {
-    transform: translateX(-25px);
-  }
-  75% {
-    transform: translateX(-35px);
-  }
-  100% {
-    transform: translateX(-59px);
-  }
-}
-
-.li:not(:hover) .menucheck {
   margin-right: 0;
-  opacity: 1;
-  display: flex;
-  animation: slide-right 0.5s ease backwards;
-  transition: margin-left 1s ease, opacity 1s ease;
-  margin-right: -59px;
-  opacity: 0;
-  margin-right: -59px;
-}
-@keyframes slide-right {
-  0% {
-    transform: translateX(-59px);
-  }
-  25% {
-    transform: translateX(-35px);
-  }
-  50% {
-    transform: translateX(-25px);
-  }
-  75% {
-    transform: translateX(-15px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
 }
 
 .fa-check {
@@ -452,6 +428,10 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fa-circle-check {
+  color: rgb(153, 226, 208);
 }
 
 .li:hover .fa-circle-check {
