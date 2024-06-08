@@ -1,3 +1,14 @@
+.entre{
+    animation: slidedown 2s ease delay iteration-count direction fill-mode;
+}
+
+
+
+
+
+
+
+
 .header_resto {
     display: flex;
     flex-direction: column;
@@ -38,9 +49,7 @@
     }
     .fa-solid {
         opacity: 0;  
-          
-          // transform: var(--maincolorgradiant);
-          // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        
                 
       }
       .fa-regular {
@@ -154,6 +163,7 @@ overflow: hidden;
     height: 69px;
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .test {
@@ -214,7 +224,7 @@ overflow: hidden;
     opacity: 1;
     display: flex;
     animation: slide-left 6s ease 0 1 normal both;
-    transition: margin-right 1s ease, opacity 1s ease;
+    transition: margin-right 1s ease;
    
 
     @keyframes slide-left{
@@ -242,7 +252,7 @@ overflow: hidden;
     opacity: 1;
     display: flex;
     animation: slide-right 0.5s ease backwards;
-    transition: margin-left 1s ease, opacity 1s ease;
+    transition: margin-left 1s ease;
     margin-right: -59px;
     opacity: 0;
     margin-right: -59px; 

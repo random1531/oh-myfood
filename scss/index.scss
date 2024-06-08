@@ -58,7 +58,7 @@
     }
   }
   
-.fa-utensils{
+.loading{
     font-size: 72px;
     background: -webkit-linear-gradient(193.33deg,  #9356dc -11.44%, #ff79da 123.93%);
     background-clip: text;
@@ -74,7 +74,8 @@
     95%{ opacity: 0.8;
     }
     100%{opacity: 0;
-    display: none;}
+    display: none;
+}
     
 }
 
