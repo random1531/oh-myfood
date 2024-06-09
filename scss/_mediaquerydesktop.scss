@@ -69,9 +69,11 @@ text-align: center;
     
    
 .menuliste{
-    width: 80%;
+    width: 73%;
     align-items: center;
-
+    justify-content: start;
+    padding-top:40px ;
+    
     .entre{
         width: 60%;
     }
@@ -79,7 +81,15 @@ text-align: center;
     
 .name_resto{
     position: relative;
-    width: 55%;
+    width: 29%;
+    align-items: start;
+    
+
+    .fa-heart{
+        position: absolute;
+        right: 0px;
+        
+    }
 }
 footer{
     flex-direction: row;

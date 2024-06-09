@@ -1,14 +1,4 @@
 
-// .fa-solid {
-//   opacity: 0;  
-    
-//     // transform: var(--maincolorgradiant);
-//     // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    
-   
-// }
-
-
 .restaurant {
     padding-top: 30px;
     display: flex;
@@ -60,9 +50,7 @@
         }
         .fa-solid {
             opacity: 0;  
-              
-              // transform: var(--maincolorgradiant);
-              // color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+     
                     
           }
           .fa-regular {
@@ -74,24 +62,8 @@
         }
         .fa-solid:hover {
             opacity: 1;
-            animation: bounce 1s ease 0s 1 normal both;
-            transform: scale(1.5);
-
-            @keyframes bounce {
-                0%, 20%, 50%, 80%, 100% {
-                    transform: translateY(0px);
-                }
-                40% {
-                    transform: translateY(-15px);
-                }
-                60% {
-                    transform: translateY(-10px);
-                }
-
-                100%{
-                    transform: translateY(0px);
-                }
-            }
+            animation: opacity 1s ease ;
+         
         }
         
         

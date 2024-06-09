@@ -1,6 +1,6 @@
 .entre {
     opacity: 1;
-    transition: opacity 2s ease ;
+    transition: opacity 2s ease;
 }
 
 .header_resto {
@@ -72,7 +72,6 @@
     font-weight: 700;
     line-height: 21.09px;
     text-align: left;
-    
 }
 
 .subtitle_menu {
@@ -118,7 +117,6 @@
     }
 }
 
-
 .entre {
     display: flex;
     flex-direction: column;
@@ -141,14 +139,9 @@
     color: white;
 }
 .checkbox1 {
-    // width: 100%;
     height: 100%;
-    // padding: 50PX;
-    // appearance: none;
+
     margin: 0;
-    
-    
-    
 }
 .li {
     justify-content: space-between;
@@ -160,13 +153,9 @@
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
-
-    
-    
 }
 .li:hover:checked {
-        
-    .checkbox1{
+    .checkbox1 {
         appearance: none;
     }
 }

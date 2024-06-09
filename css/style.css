@@ -79,6 +79,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body a {
   text-decoration: none;
@@ -123,6 +124,10 @@ body .text3 {
   font-weight: 300;
   line-height: 21.09px;
   text-align: center;
+}
+
+.srink {
+  font-family: Shrikhand;
 }
 
 .header_index {
@@ -632,22 +637,7 @@ footer a {
 }
 .restaurant .restaurant-contenaire .fa-solid:hover {
   opacity: 1;
-  animation: bounce 1s ease 0s 1 normal both;
-  transform: scale(1.5);
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0px);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  animation: opacity 1s ease;
 }
 .restaurant .fa-heart {
   position: absolute;
@@ -745,79 +735,22 @@ footer a {
     width: 100%;
   }
   .menuliste {
-    width: 80%;
+    width: 73%;
     align-items: center;
+    justify-content: start;
+    padding-top: 40px;
   }
   .menuliste .entre {
     width: 60%;
   }
   .name_resto {
     position: relative;
-    width: 55%;
+    width: 29%;
+    align-items: start;
   }
-  footer {
-    flex-direction: row;
-    height: 114px;
-    align-items: end;
-  }
-  nav ul {
-    flex-direction: row;
-    align-items: end;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .info h1 {
-    font-family: Roboto;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 46.88px;
-    text-align: center;
-  }
-  .info p {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21.09px;
-    text-align: center;
-  }
-  .fonctionement .fonctionnement-contenair {
-    flex-direction: row;
-    width: 80%;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  .fonctionement .fonctionnement-contenair-card {
-    width: 45%;
-  }
-  .fonctionement .fonctionnement-contenair-card h3 {
-    width: auto;
-  }
-  h2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .restaurant {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .restaurant .restaurant-contenaire {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  .restaurant .restaurant-contenaire a {
-    width: 47%;
-  }
-  .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
-    width: 100%;
+  .name_resto .fa-heart {
+    position: absolute;
+    right: 0px;
   }
   footer {
     flex-direction: row;
