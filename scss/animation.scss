@@ -1,0 +1,149 @@
+.loader {
+  position: fixed;
+  background-color: rgb(190, 190, 190);
+  height: 100vh;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: endload 1s ease forwards;
+
+  p {
+    font-size: 32px;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+    animation:
+      gradient-scroll 2.5s linear infinite,
+      text-blur-out 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+    background: linear-gradient(to right, #9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // animation: gradient-scroll 1.2s linear infinite;
+  }
+}
+
+.fa-solid {
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+.loading {
+  font-size: 72px;
+  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: unset;
+  opacity: 1;
+}
+
+.entre,
+.dessert,
+.plat {
+  opacity: 1;
+  animation: appar 3s ease;
+}
+
+.entre,
+.plat,
+.dessert {
+  opacity: 0;
+
+  animation: appar 3s ease forwards;
+}
+
+.entre {
+  animation-delay: 0s;
+}
+
+.plat {
+  animation-delay: 1s;
+}
+
+.dessert {
+  animation-delay: 2s;
+}
+@keyframes appar {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes endload {
+  0% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes gradient-scroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  75% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

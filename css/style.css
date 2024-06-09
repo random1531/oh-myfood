@@ -2,77 +2,6 @@
   --maincolor: rgba(147, 86, 220, 1);
 }
 
-.loader {
-  position: fixed;
-  background-color: rgb(190, 190, 190);
-  height: 100vh;
-  inset: 0;
-  z-index: 3;
-  opacity: 0.8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  animation: endload 10s ease forwards;
-}
-.loader p {
-  font-size: 32px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  animation: gradient-scroll 2.5s linear infinite, text-blur-out 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
-  background: linear-gradient(to right, #9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-@keyframes gradient-scroll {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-@-webkit-keyframes text-blur-out {
-  0% {
-    -webkit-filter: blur(0.01);
-    filter: blur(0.01);
-  }
-  100% {
-    -webkit-filter: blur(12px) opacity(0%);
-    filter: blur(12px) opacity(0%);
-  }
-}
-@keyframes text-blur-out {
-  0% {
-    -webkit-filter: blur(0.01);
-    filter: blur(0.01);
-  }
-  100% {
-    -webkit-filter: blur(12px) opacity(0%);
-    filter: blur(12px) opacity(0%);
-  }
-}
-.loading {
-  font-size: 72px;
-  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: unset;
-  opacity: 1;
-}
-
-@keyframes endload {
-  0% {
-    opacity: 0.8;
-  }
-  95% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
 body {
   display: flex;
   flex-direction: column;
@@ -123,6 +52,27 @@ body .text3 {
   font-size: 18px;
   font-weight: 300;
   line-height: 21.09px;
+  text-align: center;
+}
+body .text4 {
+  font-family: Roboto;
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
+}
+body .text5 {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+}
+body .xxx {
+  font-family: Roboto;
+  font-size: 15.04px;
+  font-weight: 700;
+  line-height: 17.63px;
   text-align: center;
 }
 
@@ -219,17 +169,12 @@ footer a {
   color: white;
 }
 
-.entre {
-  opacity: 1;
-  transition: opacity 2s ease;
-}
-
 .header_resto {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 63px;
+  height: 96px;
 }
 .header_resto a {
   position: absolute;
@@ -238,7 +183,7 @@ footer a {
 }
 .header_resto .log_head {
   width: 100%;
-  height: 60px;
+  height: 96px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,6 +256,7 @@ footer a {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 
 .menuliste {
@@ -318,8 +264,9 @@ footer a {
   flex-direction: column;
   justify-content: center;
   background-color: rgb(246, 246, 246);
-  top: 275px;
+  top: 343px;
   margin-top: -25px;
+  padding-bottom: 30px;
   gap: 20px;
   width: 100%;
   z-index: 1;
@@ -331,31 +278,24 @@ footer a {
   align-items: center;
 }
 
-.entre {
+.entre,
+.plat,
+.dessert {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.entre .zaa {
+.entre .zaa,
+.plat .zaa,
+.dessert .zaa {
   width: 90%;
 }
-.entre .zaa h2 {
-  border-bottom: 1px rgb(153, 226, 208) solid;
+.entre .zaa h2,
+.plat .zaa h2,
+.dessert .zaa h2 {
+  border-bottom: 2px rgb(153, 226, 208) solid;
   width: 40px;
-}
-
-.checkbox1:checked + label .menucheck {
-  background: green;
-}
-
-.checkbox1:checked + label .fa-circle-check {
-  color: white;
-}
-
-.checkbox1 {
-  height: 100%;
-  margin: 0;
 }
 
 .li {
@@ -370,23 +310,31 @@ footer a {
   overflow: hidden;
 }
 
-.li:hover:checked .checkbox1 {
-  appearance: none;
-}
-
 .test {
   display: flex;
   flex-direction: column;
-  height: 42px;
+  justify-content: center;
+  height: auto;
   gap: 5px;
-  padding: 15px;
+  width: 100%;
+  width: auto;
+  padding-left: 15px;
   overflow: hidden;
   position: relative;
   z-index: 1;
   white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.test .text4, .test .text5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.test h3 {
+  text-overflow: ellipsis;
 }
 .test p {
   text-align: left;
+  text-overflow: ellipsis;
 }
 
 .price {
@@ -394,7 +342,8 @@ footer a {
   align-items: end;
   justify-content: end;
   width: auto;
-  padding: 15px;
+  padding-top: 20px;
+  padding-right: 15px;
   margin-left: auto;
   position: relative;
   z-index: 3;
@@ -444,23 +393,6 @@ footer a {
   color: rgb(153, 226, 208);
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  75% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .li:hover .test {
   width: 65%;
 }
@@ -685,6 +617,135 @@ footer a {
   text-align: left;
 }
 
+.loader {
+  position: fixed;
+  background-color: rgb(190, 190, 190);
+  height: 100vh;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: endload 1s ease forwards;
+}
+.loader p {
+  font-size: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  animation: gradient-scroll 2.5s linear infinite, text-blur-out 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+  background: linear-gradient(to right, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-solid {
+  transition: all 1s ease;
+  opacity: 1;
+}
+
+.loading {
+  font-size: 72px;
+  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: unset;
+  opacity: 1;
+}
+
+.entre,
+.dessert,
+.plat {
+  opacity: 1;
+  animation: appar 3s ease;
+}
+
+.entre,
+.plat,
+.dessert {
+  opacity: 0;
+  animation: appar 3s ease forwards;
+}
+
+.entre {
+  animation-delay: 0s;
+}
+
+.plat {
+  animation-delay: 1s;
+}
+
+.dessert {
+  animation-delay: 2s;
+}
+
+@keyframes appar {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes endload {
+  0% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes gradient-scroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @media (min-width: 1024px) {
   .info h1 {
     font-family: Roboto;
@@ -740,7 +801,7 @@ footer a {
     justify-content: start;
     padding-top: 40px;
   }
-  .menuliste .entre {
+  .menuliste .entre, .menuliste .plat, .menuliste .dessert {
     width: 60%;
   }
   .name_resto {
