@@ -8,7 +8,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: roboto;
 }
 body a {
   text-decoration: none;
@@ -75,11 +75,19 @@ body .xxx {
   line-height: 17.63px;
   text-align: center;
 }
+body .text6 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+}
 
 .srink {
   font-family: Shrikhand;
 }
 
+/***Header index**/
 .header_index {
   display: flex;
   flex-direction: column;
@@ -91,8 +99,8 @@ body .xxx {
   width: 100%;
   height: 60px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) !important;
   position: relative;
@@ -103,9 +111,9 @@ body .xxx {
 }
 .header_index .localisation {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  justify-content: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   background-color: #eaeaea;
   position: relative;
@@ -114,17 +122,40 @@ body .xxx {
   height: 50px;
 }
 .header_index .localisation i {
-  size: 16px;
+  font-size: 16px;
 }
 
-@media (min-width: 767.98px) {
-  .header_index {
-    height: 146px;
-  }
-  .header_index .log_head {
-    height: 93px;
-  }
+/***Header restaurant**/
+.header_resto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 96px;
 }
+.header_resto a {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+}
+.header_resto .log_head {
+  width: 100%;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) !important;
+  position: relative;
+  z-index: 1;
+}
+.header_resto .log_head img {
+  height: 36px;
+}
+.header_resto .log_head .fa-solid {
+  font-size: 27px;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -169,36 +200,6 @@ footer a {
   color: white;
 }
 
-.header_resto {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  height: 96px;
-}
-.header_resto a {
-  position: absolute;
-  top: 17px;
-  left: 17px;
-}
-.header_resto .log_head {
-  width: 100%;
-  height: 96px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078) !important;
-  position: relative;
-  z-index: 1;
-}
-.header_resto .log_head img {
-  height: 36px;
-}
-.header_resto .log_head .fa-solid {
-  font-size: 27px;
-}
-
 .name_resto .fa-heart {
   font-size: 21px;
 }
@@ -226,7 +227,6 @@ footer a {
 }
 
 .Title_menu {
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 700;
   line-height: 21.09px;
@@ -234,7 +234,6 @@ footer a {
 }
 
 .subtitle_menu {
-  font-family: Roboto;
   font-size: 15.04px;
   font-weight: 300;
   line-height: 17.63px;
@@ -265,7 +264,7 @@ footer a {
   justify-content: center;
   background-color: rgb(246, 246, 246);
   top: 343px;
-  margin-top: -25px;
+  margin-top: -30px;
   padding-bottom: 30px;
   gap: 20px;
   width: 100%;
@@ -286,19 +285,19 @@ footer a {
   align-items: center;
   gap: 15px;
 }
-.entre .zaa,
-.plat .zaa,
-.dessert .zaa {
+.entre .name_section,
+.plat .name_section,
+.dessert .name_section {
   width: 90%;
 }
-.entre .zaa h2,
-.plat .zaa h2,
-.dessert .zaa h2 {
+.entre .name_section h2,
+.plat .name_section h2,
+.dessert .name_section h2 {
   border-bottom: 2px rgb(153, 226, 208) solid;
   width: 40px;
 }
 
-.li {
+.menu_card {
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -310,46 +309,29 @@ footer a {
   overflow: hidden;
 }
 
-.test {
+.menu_card_info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: auto;
   gap: 5px;
   width: 100%;
   width: auto;
   padding-left: 15px;
   overflow: hidden;
-  position: relative;
-  z-index: 1;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
-.test .text4, .test .text5 {
+.menu_card_info .menu_card_subtitle,
+.menu_card_info .menu_card_title {
   overflow: hidden;
-  text-overflow: ellipsis;
-}
-.test h3 {
-  text-overflow: ellipsis;
-}
-.test p {
-  text-align: left;
   text-overflow: ellipsis;
 }
 
 .price {
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  width: auto;
   padding-top: 20px;
   padding-right: 15px;
   margin-left: auto;
-  position: relative;
-  z-index: 3;
 }
 
-.li .menucheck {
+.menu_card .menucheck {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,7 +350,7 @@ footer a {
   border-radius: 15px;
 }
 
-.li:hover .menucheck {
+.menu_card:hover .menucheck {
   margin-right: 0;
   display: flex;
   margin-right: 0;
@@ -380,40 +362,35 @@ footer a {
 
 .btn_resto {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .fa-circle-check {
   color: rgb(153, 226, 208);
 }
 
-.li:hover .fa-circle-check {
+.menu_card:hover .fa-circle-check {
   animation: rotate 1s ease-in-out;
   color: rgb(153, 226, 208);
-}
-
-.li:hover .test {
-  width: 65%;
 }
 
 .main_contenaire {
   flex: 1;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding-bottom: 60px;
 }
 
 .info {
   width: 100%;
   background-color: rgb(246, 246, 246);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   height: auto;
   padding-top: 20px;
   padding-bottom: 30px;
@@ -427,8 +404,8 @@ footer a {
 }
 .info .btn {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 25px;
   width: 218px;
   height: 50px;
@@ -444,12 +421,12 @@ footer a {
 
 .fonctionement {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   padding: 20px 0px 20px 0px;
   height: auto;
-  align-items: center;
-  justify-content: center;
   background-color: white;
 }
 .fonctionement h2 {
@@ -464,19 +441,19 @@ footer a {
   gap: 15px;
   width: 89%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .fonctionement .fonctionnement-contenair-card {
   position: relative;
   height: 72.38px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: #f6f6f6;
   border-radius: 20px;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   gap: 30px;
 }
@@ -495,8 +472,8 @@ footer a {
 }
 .fonctionement p {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   margin: 0;
   position: absolute;
   top: 24px;
@@ -519,6 +496,7 @@ footer a {
   display: flex;
   flex-direction: column;
   height: auto;
+  padding-bottom: 30px;
   justify-content: center;
   width: 91%;
   background-color: rgb(246, 246, 246);
@@ -532,9 +510,9 @@ footer a {
 }
 .restaurant .restaurant-contenaire {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 18px;
   width: 100%;
 }
@@ -761,15 +739,21 @@ footer a {
     line-height: 21.09px;
     text-align: center;
   }
+  .fonctionement {
+    height: 228px;
+    gap: 25px;
+  }
   .fonctionement .fonctionnement-contenair {
     flex-direction: row;
-    width: 80%;
+    width: 75%;
     justify-content: space-between;
   }
   .fonctionement .fonctionnement-contenair-card {
-    width: 30.6%;
+    width: calc(33.33% - 20px);
+    gap: 20px;
   }
   .fonctionement h2 {
+    width: 75%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -780,6 +764,13 @@ footer a {
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+    gap: 28px;
+    height: auto;
+  }
+  .restaurant h2 {
+    width: 75%;
+    text-align: left;
+    height: 25px;
   }
   .restaurant .restaurant-contenaire {
     flex-direction: row;
@@ -787,10 +778,10 @@ footer a {
     gap: 100px;
     width: 75%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   .restaurant .restaurant-contenaire a {
-    width: 43%;
+    width: calc(50% - 50px);
   }
   .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
     width: 100%;
@@ -812,15 +803,6 @@ footer a {
   .name_resto .fa-heart {
     position: absolute;
     right: 0px;
-  }
-  footer {
-    flex-direction: row;
-    height: 114px;
-    align-items: end;
-  }
-  nav ul {
-    flex-direction: row;
-    align-items: end;
   }
 }
 

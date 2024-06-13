@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: roboto;
     a{
         text-decoration: none;
           color: inherit;
@@ -95,12 +95,21 @@ text-align: center;
 
     }
 
+    .text6{
+        font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 18.75px;
+text-align: left;
+
+    }
+
 }
 
 .srink{
     font-family: Shrikhand;
 }
-
+@import "_mixin.scss";
 @import "header.scss";
 @import "footer.scss";
 @import "lanoteenchant.scss";

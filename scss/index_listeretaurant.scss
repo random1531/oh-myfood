@@ -1,13 +1,14 @@
+@import "_mixin";
 
 .restaurant {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    height:auto;
-    
+    height: auto;
+    padding-bottom: 30px;
     justify-content: center;
     width: 91%;
-    background-color:rgba(246, 246, 246, 1);
+    background-color: rgba(246, 246, 246, 1);
     h2 {
         height: 68px;
 
@@ -18,13 +19,11 @@
     }
 
     .restaurant-contenaire {
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+
         gap: 18px;
         width: 100%;
-        
 
         a {
             display: flex;
@@ -46,74 +45,65 @@
             height: 251px;
             object-fit: cover;
             border-radius: 0px 0px 15px 15px;
-
         }
         .fa-solid {
-            opacity: 0;  
-     
-                    
-          }
-          .fa-regular {
+            opacity: 0;
+        }
+        .fa-regular {
             opacity: 1;
         }
-        
+
         .fa-regular:hover {
             opacity: 0;
         }
         .fa-solid:hover {
             opacity: 1;
-            animation: opacity 1s ease ;
-         
+            animation: opacity 1s ease;
         }
-        
-        
-        }
-        .fa-heart {
-            position: absolute;
-            right: 40px;
-            
-            
-        }
-        
-        .cls{
-            background: -webkit-linear-gradient(193.33deg,  #9356dc -11.44%, #ff79da 123.93%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-        }
-        
     }
-    .img-restaurent {
-        width: 100%;
-        height: 174px;
-        border-radius: 15px 15px 0px 0px;
-        object-fit: cover;
+    .fa-heart {
+        position: absolute;
+        right: 40px;
     }
-    .contenaire-card-info {
-        display: flex;
-        justify-content: flex-start;
-        gap: 105px;
-        align-items: center;
-        height: 77px;
-        margin: 0;
-        position: relative;
-        left: 20px;
 
-        i {
-            font-size: 22px;
-        }
-        h3 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 700;
-            line-height: 21.09px;
-            text-align: left;
-        }
-        p {
-            margin: 0;
-            font-size: 17px;
-            font-weight: 300;
-            line-height: 19.92px;
-            text-align: left;
-        }
+    .cls {
+        background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
     }
+}
+.img-restaurent {
+    width: 100%;
+    height: 174px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+}
+.contenaire-card-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 105px;
+    align-items: center;
+    height: 77px;
+    margin: 0;
+    position: relative;
+    left: 20px;
+
+    i {
+        font-size: 22px;
+    }
+    h3 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.09px;
+        text-align: left;
+    }
+    p {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 19.92px;
+        text-align: left;
+    }
+}

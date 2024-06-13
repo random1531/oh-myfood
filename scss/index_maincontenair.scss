@@ -1,21 +1,19 @@
+@import '_mixin';
+
 
 .main_contenaire{
     flex: 1;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center; 
     flex-direction: column;
-    padding-bottom:60px ;
+    
 }
 
 .info{
 width: 100%;
 background-color:rgba(246, 246, 246, 1) ;
-display: flex;
+@include flex-center; 
 flex-direction: column;
-align-items: center;
-justify-content: center;
 height: auto;
 padding-top: 20px;
 padding-bottom: 30px;
@@ -29,9 +27,7 @@ gap: 27px;
     width: 84%;
     }
     .btn{
-        display: flex;
-        align-items: center;
-        justify-content:center ;
+        @include flex-center; 
         border-radius: 25px;
         width: 218px;
         height: 50px;
@@ -50,13 +46,11 @@ gap: 27px;
 
 
 .fonctionement {
-    display: flex;
+    @include flex-center; 
     flex-direction: column;
     width: 100%;
     padding: 20px 0px 20px 00px;
-    height: auto;
-    align-items: center;
-    justify-content: center;
+    height: auto;   
     background-color: white;
 
     h2 {
@@ -70,23 +64,19 @@ gap: 27px;
 
     .fonctionnement-contenair {
         gap: 15px;
-
         width: 89%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flex-center; 
+        flex-direction: column;        
     }
 
     .fonctionnement-contenair-card {
         position: relative;
         height: 72.38px;
-        display: flex;
+        @include flex-center; 
         width: 100%;
         background-color: #f6f6f6;
         border-radius: 20px;
-        align-items: center;
-        justify-content: center;
+       
         box-shadow: 0px 4px 15px 0px #00000026;
         gap: 30px;
 
@@ -108,9 +98,7 @@ gap: 27px;
         position: absolute;
     }
     p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flex-center; 
         margin: 0;
         position: absolute;
         top: 24px;
