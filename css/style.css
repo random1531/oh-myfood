@@ -35,24 +35,6 @@ body .text1 {
   line-height: 18.75px;
   text-align: left;
 }
-body .text2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  text-align: center;
-}
-body .text3 {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 21.09px;
-  text-align: center;
-}
-body .text4 {
-  font-size: 15.04px;
-  font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
-}
 body .menu_card_title {
   font-size: 18px;
   font-weight: 500;
@@ -379,6 +361,10 @@ footer a {
 }
 .info h1 {
   width: 73.4%;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46.88px;
+  text-align: center;
 }
 .info p {
   width: 84%;
@@ -392,7 +378,6 @@ footer a {
   height: 50px;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
@@ -412,7 +397,6 @@ footer a {
 }
 .fonctionement h2 {
   left: 70px;
-  font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
@@ -466,7 +450,6 @@ footer a {
   width: 24px;
   text-align: center;
   color: white;
-  font-family: Roboto;
   font-size: 14.18px;
   font-weight: 500;
   line-height: 16.62px;
@@ -505,7 +488,7 @@ footer a {
   width: 100%;
   height: 251px;
   object-fit: cover;
-  border-radius: 0px 0px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
 }
 .restaurant .restaurant-contenaire .restaurant-contenaire-card {
   display: flex;
@@ -707,14 +690,12 @@ footer a {
 }
 @media (min-width: 1024px) {
   .info h1 {
-    font-family: Roboto;
     font-size: 40px;
     font-weight: 700;
     line-height: 46.88px;
     text-align: center;
   }
   .info p {
-    font-family: Roboto;
     font-size: 18px;
     font-weight: 300;
     line-height: 21.09px;
@@ -767,19 +748,31 @@ footer a {
   .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
     width: 100%;
   }
-  .menuliste {
+  .main_contenaire_resto .menuliste {
     width: 73%;
     align-items: center;
-    justify-content: start;
-    padding-top: 40px;
   }
-  .menuliste .entre,
-  .menuliste .plat,
-  .menuliste .dessert {
+  .main_contenaire_resto .menuliste .entre,
+  .main_contenaire_resto .menuliste .plat,
+  .main_contenaire_resto .menuliste .dessert {
     width: 60%;
   }
-  .menuliste .name_resto {
-    width: 29%;
+  .main_contenaire_resto .menuliste .name_resto {
+    width: 45%;
+  }
+  footer {
+    height: 114px;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  footer nav {
+    height: 20px;
+  }
+  footer nav ul {
+    margin: 0;
+    height: 20px;
+    flex-direction: row;
   }
 }
 

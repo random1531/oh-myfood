@@ -1,14 +1,14 @@
 @media (min-width: 1024px) {
     .info {
         h1 {
-            font-family: Roboto;
+            
             font-size: 40px;
             font-weight: 700;
             line-height: 46.88px;
             text-align: center;
         }
         p {
-            font-family: Roboto;
+            
             font-size: 18px;
             font-weight: 300;
             line-height: 21.09px;
@@ -62,18 +62,40 @@
             }
         }
     }
+
+    .main_contenaire_resto{
     .menuliste {
         width: 73%;
         align-items: center;
-        justify-content: start;
-        padding-top: 40px;
+        
         .entre,
         .plat,
         .dessert {
             width: 60%;
         }
         .name_resto {
-            width: 29%;
+            width: 45%;
         }
     }
+    
+}
+    footer{
+        height: 114px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: flex-start;
+        
+        nav{
+           
+            height: 20px;
+            
+        ul{
+            margin: 0;
+            height: 20px;
+            flex-direction: row;
+            
+        }
+    }
+    }
+
 }
