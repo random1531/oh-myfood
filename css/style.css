@@ -26,65 +26,56 @@ body .btn {
   height: 50px;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
   text-align: center;
   color: white;
 }
 body .text1 {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
   text-align: left;
 }
 body .text2 {
-  font-family: Roboto;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
   text-align: center;
 }
 body .text3 {
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 300;
   line-height: 21.09px;
   text-align: center;
 }
 body .text4 {
-  font-family: Roboto;
   font-size: 15.04px;
   font-weight: 300;
   line-height: 17.63px;
   text-align: left;
 }
-body .text5 {
-  font-family: Roboto;
+body .menu_card_title {
   font-size: 18px;
   font-weight: 500;
   line-height: 21.09px;
   text-align: left;
 }
-body .xxx {
-  font-family: Roboto;
+body .subtitle_text {
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
+}
+body .price {
   font-size: 15.04px;
   font-weight: 700;
   line-height: 17.63px;
   text-align: center;
 }
 body .text6 {
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 500;
   line-height: 18.75px;
   text-align: left;
-}
-
-.srink {
-  font-family: Shrikhand;
 }
 
 /***Header index**/
@@ -131,7 +122,7 @@ body .text6 {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  height: 96px;
+  height: 63px;
 }
 .header_resto a {
   position: absolute;
@@ -200,48 +191,15 @@ footer a {
   color: white;
 }
 
-.name_resto .fa-heart {
-  font-size: 21px;
+.main_contenaire_resto {
+  top: 315px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  /*Image restaurante*/
 }
-.name_resto .fa-solid {
-  opacity: 0;
-}
-.name_resto .fa-regular {
-  opacity: 1;
-}
-.name_resto .fa-regular:hover {
-  opacity: 0;
-}
-.name_resto .fa-solid:hover {
-  opacity: 1;
-}
-.name_resto .fa-heart {
-  position: absolute;
-  right: 40px;
-}
-.name_resto .cls {
-  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 0;
-}
-
-.Title_menu {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.09px;
-  text-align: left;
-}
-
-.subtitle_menu {
-  font-size: 15.04px;
-  font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
-  overflow: hidden;
-}
-
-.resto {
+.main_contenaire_resto .resto {
   object-fit: cover;
   width: 100%;
   z-index: 0;
@@ -249,16 +207,7 @@ footer a {
   top: 63px;
   z-index: 0;
 }
-
-.main_contenaire_resto {
-  top: 315px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
-
-.menuliste {
+.main_contenaire_resto .menuliste {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,30 +220,76 @@ footer a {
   z-index: 1;
   border-radius: 40px 40px 0px 0px;
 }
-.menuliste .name_resto {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.entre,
-.plat,
-.dessert {
+.main_contenaire_resto .menuliste .entre,
+.main_contenaire_resto .menuliste .plat,
+.main_contenaire_resto .menuliste .dessert {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.entre .name_section,
-.plat .name_section,
-.dessert .name_section {
+.main_contenaire_resto .menuliste .entre .name_section,
+.main_contenaire_resto .menuliste .plat .name_section,
+.main_contenaire_resto .menuliste .dessert .name_section {
   width: 90%;
 }
-.entre .name_section h2,
-.plat .name_section h2,
-.dessert .name_section h2 {
+.main_contenaire_resto .menuliste .entre .name_section h2,
+.main_contenaire_resto .menuliste .plat .name_section h2,
+.main_contenaire_resto .menuliste .dessert .name_section h2 {
   border-bottom: 2px rgb(153, 226, 208) solid;
   width: 40px;
+}
+.main_contenaire_resto .menuliste .name_resto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 17px;
+  font-family: Shrikhand;
+  font-size: 19px;
+  font-weight: 400;
+  width: 95%;
+}
+.main_contenaire_resto .menuliste .name_resto .heart_placement {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_contenaire_resto .menuliste .name_resto h2 {
+  width: 80%;
+  margin-top: 23.655px;
+  margin-bottom: 23.655px;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-heart {
+  font-size: 21px;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-solid {
+  opacity: 0;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-regular {
+  opacity: 1;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-regular:hover {
+  opacity: 0;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-solid:hover {
+  opacity: 1;
+}
+.main_contenaire_resto .menuliste .name_resto .fa-heart {
+  position: absolute;
+}
+.main_contenaire_resto .menuliste .name_resto .cls {
+  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+}
+.main_contenaire_resto .btn_resto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu_card {
@@ -308,8 +303,7 @@ footer a {
   border-radius: 15px;
   overflow: hidden;
 }
-
-.menu_card_info {
+.menu_card .menu_card_info {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -319,16 +313,23 @@ footer a {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu_card_info .menu_card_subtitle,
-.menu_card_info .menu_card_title {
+.menu_card .menu_card_info .menu_card_subtitle,
+.menu_card .menu_card_info .menu_card_title {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.price {
+.menu_card .price {
   padding-top: 20px;
   padding-right: 15px;
   margin-left: auto;
+}
+.menu_card .menucheck i {
+  border-color: white;
+  background: white;
+  border-radius: 15px;
+}
+.menu_card .fa-circle-check {
+  color: rgb(153, 226, 208);
 }
 
 .menu_card .menucheck {
@@ -344,30 +345,10 @@ footer a {
   transition: margin 1s ease;
 }
 
-.menucheck i {
-  border-color: white;
-  background: white;
-  border-radius: 15px;
-}
-
 .menu_card:hover .menucheck {
   margin-right: 0;
   display: flex;
   margin-right: 0;
-}
-
-.fa-check {
-  color: rgb(153, 226, 208);
-}
-
-.btn_resto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa-circle-check {
-  color: rgb(153, 226, 208);
 }
 
 .menu_card:hover .fa-circle-check {
@@ -792,17 +773,13 @@ footer a {
     justify-content: start;
     padding-top: 40px;
   }
-  .menuliste .entre, .menuliste .plat, .menuliste .dessert {
+  .menuliste .entre,
+  .menuliste .plat,
+  .menuliste .dessert {
     width: 60%;
   }
-  .name_resto {
-    position: relative;
+  .menuliste .name_resto {
     width: 29%;
-    align-items: start;
-  }
-  .name_resto .fa-heart {
-    position: absolute;
-    right: 0px;
   }
 }
 
