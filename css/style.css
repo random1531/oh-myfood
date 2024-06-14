@@ -1,6 +1,9 @@
 :root {
   --maincolor: rgba(147, 86, 220, 1);
-  --gradiante: -linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  --gradiante: linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
+  --secondarycolor: #FF79DA;
+  --thirdcolor:#99E2D0;
+  --backgroundcolor: rgba(243, 243, 243, 1);
 }
 
 body {
@@ -11,24 +14,27 @@ body {
   margin: 0;
   font-family: roboto;
 }
+body .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+  background: var(--gradiante);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  color: white;
+}
 body a {
   text-decoration: none;
   color: inherit;
 }
 body a, body p, body h1, body h3, body h2 {
   margin: 0;
-}
-body .btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  width: 218px;
-  height: 50px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  text-align: center;
-  color: white;
 }
 body .text1 {
   font-size: 16px;
@@ -219,7 +225,7 @@ footer a {
 .main_contenaire_resto .menuliste .entre .name_section h2,
 .main_contenaire_resto .menuliste .plat .name_section h2,
 .main_contenaire_resto .menuliste .dessert .name_section h2 {
-  border-bottom: 2px rgb(153, 226, 208) solid;
+  border-bottom: 2px var(--thirdcolor) solid;
   width: 40px;
 }
 .main_contenaire_resto .menuliste .name_resto {
@@ -264,12 +270,12 @@ footer a {
   position: absolute;
 }
 .main_contenaire_resto .menuliste .name_resto .cls {
-  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: -webkit-linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
 }
-.main_contenaire_resto .btn_resto {
+.main_contenaire_resto .menuliste .btn_resto {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,16 +318,16 @@ footer a {
   border-radius: 15px;
 }
 .menu_card .fa-circle-check {
-  color: rgb(153, 226, 208);
+  color: var(--thirdcolor);
 }
 
 .menu_card .menucheck {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 59px;
   height: 69px;
-  background: rgb(153, 226, 208);
+  background: var(--thirdcolor);
   border-radius: 0px 15px 15px 0px;
   margin-right: -59px;
   position: relative;
@@ -336,7 +342,7 @@ footer a {
 
 .menu_card:hover .fa-circle-check {
   animation: rotate 1s ease-in-out;
-  color: rgb(153, 226, 208);
+  color: var(thirdcolor);
 }
 
 .main_contenaire {
@@ -350,7 +356,7 @@ footer a {
 
 .info {
   width: 100%;
-  background-color: rgb(246, 246, 246);
+  background-color: var(--backgroundcolor);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,28 +368,20 @@ footer a {
 }
 .info h1 {
   width: 73.4%;
-  font-size: 40px;
+  font-family: Roboto;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 46.88px;
+  line-height: 28.13px;
   text-align: center;
 }
 .info p {
   width: 84%;
-}
-.info .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  width: 218px;
-  height: 50px;
-  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.09px;
   text-align: center;
-  color: white;
+  color: rgb(53, 53, 53);
 }
 
 .fonctionement {
@@ -402,6 +400,7 @@ footer a {
   font-weight: 700;
   line-height: 28.13px;
   text-align: left;
+  width: 89%;
 }
 .fonctionement .fonctionnement-contenair {
   gap: 15px;
@@ -417,7 +416,7 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 335px;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
@@ -428,7 +427,7 @@ footer a {
   color: #7e7e7e;
 }
 .fonctionement .fonctionnement-contenair-card .fa-store {
-  color: #9356dc;
+  color: var(--maincolor);
 }
 .fonctionement .fonctionnement-contenair-card h3 {
   width: 67%;
@@ -444,8 +443,8 @@ footer a {
   position: absolute;
   top: 24px;
   left: -15px;
-  background-color: #9356dc;
-  border: #9356dc 3px solid;
+  background-color: var(--maincolor);
+  border: var(--maincolor) 3px solid;
   border-radius: 45px;
   height: 24px;
   width: 24px;
@@ -458,20 +457,22 @@ footer a {
 
 .restaurant {
   padding-top: 30px;
-  display: flex;
   flex-direction: column;
   height: auto;
-  padding-bottom: 30px;
+  display: flex;
   justify-content: center;
-  width: 91%;
-  background-color: rgb(246, 246, 246);
+  align-items: center;
+  padding-bottom: 30px;
+  width: 100%;
+  background-color: var(--backgroundcolor);
 }
 .restaurant h2 {
-  height: 68px;
   font-size: 24px;
   font-weight: 700;
   line-height: 28.13px;
   text-align: left;
+  width: 91%;
+  margin-bottom: 15px;
 }
 .restaurant .restaurant-contenaire {
   display: flex;
@@ -479,7 +480,7 @@ footer a {
   align-items: center;
   flex-direction: column;
   gap: 18px;
-  width: 100%;
+  width: 91%;
 }
 .restaurant .restaurant-contenaire a {
   display: flex;
@@ -519,7 +520,7 @@ footer a {
   right: 40px;
 }
 .restaurant .cls {
-  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: -webkit-linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
@@ -576,7 +577,7 @@ footer a {
 .loader p {
   font-size: 32px;
   animation: gradient-scroll 0.5s linear infinite, text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
-  background: linear-gradient(to right, #9356dc, #ff79da);
+  background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -709,10 +710,6 @@ footer a {
     flex-direction: row;
     width: 75%;
     justify-content: space-between;
-  }
-  .fonctionement .fonctionnement-contenair-card {
-    width: calc(33.33% - 20px);
-    gap: 20px;
   }
   .fonctionement h2 {
     width: 75%;

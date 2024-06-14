@@ -17,7 +17,7 @@
     animation:
       gradient-scroll 0.5s linear infinite,
       text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
-    background: linear-gradient(to right, #9356dc, #ff79da);
+    background: linear-gradient(to right,var(--maincolor), var(--secondarycolor));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
@@ -30,10 +30,8 @@
 }
 
 .loading {
-  font-size: 72px;
-  // background: -webkit-var(--gradiante);
-  background: var(--maincolor);
-  
+  font-size: 72px;  
+  background: var(--maincolor);  
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: unset;
@@ -53,6 +51,7 @@
   opacity: 0;
 
   animation: appar 3s ease forwards;
+  
 }
 
 .entre {

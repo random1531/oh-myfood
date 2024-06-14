@@ -40,7 +40,7 @@
             .name_section {
                 width: 90%;
                 h2 {
-                    border-bottom: 2px rgba(153, 226, 208, 1) solid;
+                    border-bottom: 2px var(--thirdcolor) solid;
                     width: 40px;
                 }
             }
@@ -90,16 +90,18 @@
             }
 
             .cls {
-                background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+                background:  -webkit-linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 0;
             }
         }
+
+        .btn_resto{
+            @include flex-center;
+        }
     }
-    .btn_resto {
-        @include flex-center;
-    }
+    
 }
 
 .menu_card {
@@ -112,6 +114,7 @@
     box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     overflow: hidden;
+
     .menu_card_info {
         display: flex;
         flex-direction: column;
@@ -139,17 +142,15 @@
         border-radius: 15px;
     }
     .fa-circle-check {
-        color: rgba(153, 226, 208, 1);
+        color: var(--thirdcolor);
     }
 }
 
 .menu_card .menucheck {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 59px;
     height: 69px;
-    background: rgba(153, 226, 208, 1);
+    background: var(--thirdcolor);
     border-radius: 0px 15px 15px 0px;
     margin-right: -59px;
     position: relative;
@@ -166,5 +167,5 @@
 
 .menu_card:hover .fa-circle-check {
     animation: rotate 1s ease-in-out;
-    color: rgba(153, 226, 208, 1);
+    color: var(thirdcolor);
 }

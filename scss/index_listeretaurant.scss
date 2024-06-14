@@ -2,20 +2,22 @@
 
 .restaurant {
     padding-top: 30px;
-    display: flex;
+
     flex-direction: column;
     height: auto;
+    @include flex-center;
     padding-bottom: 30px;
-    justify-content: center;
-    width: 91%;
-    background-color: rgba(246, 246, 246, 1);
-    h2 {
-        height: 68px;
 
+    width: 100%;
+    background-color: var(--backgroundcolor);
+    h2 {
+        
         font-size: 24px;
         font-weight: 700;
         line-height: 28.13px;
         text-align: left;
+        width: 91%;
+        margin-bottom: 15px;
     }
 
     .restaurant-contenaire {
@@ -23,7 +25,7 @@
         flex-direction: column;
 
         gap: 18px;
-        width: 100%;
+        width: 91%;
 
         a {
             display: flex;
@@ -67,7 +69,7 @@
     }
 
     .cls {
-        background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+        background: -webkit-linear-gradient(193.33deg,var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
