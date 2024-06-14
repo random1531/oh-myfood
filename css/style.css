@@ -1,5 +1,6 @@
 :root {
   --maincolor: rgba(147, 86, 220, 1);
+  --gradiante: -linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
 
 body {
@@ -570,11 +571,11 @@ footer a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: endload 1s ease forwards;
+  animation: endload 3s ease forwards;
 }
 .loader p {
   font-size: 32px;
-  animation: gradient-scroll 2.5s linear infinite, text-blur-out 2.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
+  animation: gradient-scroll 0.5s linear infinite, text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
   background: linear-gradient(to right, #9356dc, #ff79da);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -587,7 +588,7 @@ footer a {
 
 .loading {
   font-size: 72px;
-  background: -webkit-linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  background: var(--maincolor);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: unset;
