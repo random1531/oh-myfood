@@ -50,26 +50,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
+            
             left: 17px;
             font-family: Shrikhand;
             font-size: 19px;
             font-weight: 400;
-            width: 100%;
+           
             .bloc{
                 display: flex;
                 align-items: center;
-                width: 95%;
+                    justify-content: center;
+                    width: 100%;
+            .secondhear{
                 position: relative;
+                @include flex-center;
+                width: 25px;
+            
                 .fa-heart {
                     position: absolute;
-                    right: 40px;
+                    right: 0px;
                     
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
             }
+            }
+            
             
 
             h2 {
@@ -154,6 +161,9 @@
     }
 }
 
+
+
+
 .menu_card .menucheck {
     @include flex-center;
     width: 59px;
@@ -175,5 +185,5 @@
 
 .menu_card:hover .fa-circle-check {
     animation: rotate 1s ease-in-out;
-    color: var(thirdcolor);
+    color: var(--thirdcolor);
 }

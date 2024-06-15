@@ -164,22 +164,27 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   left: 17px;
   font-family: Shrikhand;
   font-size: 19px;
   font-weight: 400;
-  width: 100%;
 }
 .main_contenaire_resto .menuliste .name_resto .bloc {
   display: flex;
   align-items: center;
-  width: 95%;
-  position: relative;
+  justify-content: center;
+  width: 100%;
 }
-.main_contenaire_resto .menuliste .name_resto .bloc .fa-heart {
+.main_contenaire_resto .menuliste .name_resto .bloc .secondhear {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+}
+.main_contenaire_resto .menuliste .name_resto .bloc .secondhear .fa-heart {
   position: absolute;
-  right: 40px;
+  right: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,7 +285,7 @@ footer a {
 
 .menu_card:hover .fa-circle-check {
   animation: rotate 1s ease-in-out;
-  color: var(thirdcolor);
+  color: var(--thirdcolor);
 }
 
 .main_contenaire {
@@ -369,9 +374,6 @@ footer a {
 }
 .fonctionement .fonctionnement-contenair-card .fa-store {
   color: var(--maincolor);
-}
-.fonctionement .fonctionnement-contenair-card h3 {
-  width: 67%;
 }
 .fonctionement .fa-circle {
   position: absolute;
@@ -481,7 +483,7 @@ footer a {
   top: 13px;
   right: 10px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 0;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   background: var(--thirdcolor);
@@ -705,7 +707,8 @@ footer a {
     gap: 30px;
   }
   .fonctionement .fonctionnement-contenair .fonctionnement-contenair-card {
-    width: -29.6666666667px;
+    width: calc(33% - 30px);
+    gap: 10px;
   }
   .fonctionement h2 {
     width: 75%;
@@ -751,7 +754,14 @@ footer a {
     width: 60%;
   }
   .main_contenaire_resto .menuliste .name_resto {
-    width: 60%;
+    width: 308px;
+  }
+  .main_contenaire_resto .menuliste .name_resto .bloc {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .main_contenaire_resto .menuliste .name_resto h2 {
+    width: auto;
   }
   footer {
     height: 114px;
