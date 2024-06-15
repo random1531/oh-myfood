@@ -33,8 +33,9 @@ text-align: center;
     }
 
     p{
-    width: 84%;
-    //styleName: Paragraph;
+
+    width:  73.4%;
+   @include flex-center; 
 font-family: Roboto;
 font-size: 18px;
 font-weight: 300;
@@ -69,7 +70,7 @@ color: rgba(53, 53, 53, 1);
 
     .fonctionnement-contenair {
         gap: 15px;
-        width: 89%;
+        width: 100%;
         @include flex-center; 
         flex-direction: column;        
     }
@@ -78,7 +79,7 @@ color: rgba(53, 53, 53, 1);
         position: relative;
         height: 72.38px;
         @include flex-center; 
-        width: 335px;
+        width: 89%;
         background-color: #f6f6f6;
         border-radius: 20px;
        

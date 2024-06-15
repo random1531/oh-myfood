@@ -45,24 +45,32 @@
                 }
             }
         }
-
+        
         .name_resto {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             position: relative;
             left: 17px;
             font-family: Shrikhand;
             font-size: 19px;
             font-weight: 400;
-            width: 95%;
-            .heart_placement {
-                position: absolute;
-                right: 40px;
+            width: 100%;
+            .bloc{
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                width: 95%;
+                position: relative;
+                .fa-heart {
+                    position: absolute;
+                    right: 40px;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
+            
 
             h2 {
                 width: 80%;
@@ -154,7 +162,7 @@
     border-radius: 0px 15px 15px 0px;
     margin-right: -59px;
     position: relative;
-    transition: margin 1s ease;
+    transition: margin 0.5s ease;
 }
 
 .menu_card:hover {

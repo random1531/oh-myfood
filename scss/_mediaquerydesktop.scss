@@ -22,6 +22,10 @@
             flex-direction: row;
             width: 75%;
             justify-content: space-between;
+            gap: 30px;
+            .fonctionnement-contenair-card{
+                width: 1/3 - 30px;
+            }
             
         }
         
@@ -53,7 +57,7 @@
             align-items: center;
             justify-content: space-between;
             a {
-                width: calc(50% - 50px);
+                width: calc(50% - 7%);
                 .restaurant-contenaire-card {
                     width: 100%;
                 }
@@ -72,9 +76,10 @@
             width: 60%;
         }
         .name_resto {
-            width: 45%;
+            width: 60%;
         }
     }
+    
     
 }
     footer{

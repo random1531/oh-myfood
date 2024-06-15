@@ -1,72 +1,4 @@
-:root {
-  --maincolor: rgba(147, 86, 220, 1);
-  --gradiante: linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
-  --secondarycolor: #FF79DA;
-  --thirdcolor:#99E2D0;
-  --backgroundcolor: rgba(243, 243, 243, 1);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  font-family: roboto;
-}
-body .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  width: 218px;
-  height: 50px;
-  background: var(--gradiante);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: center;
-  color: white;
-}
-body a {
-  text-decoration: none;
-  color: inherit;
-}
-body a, body p, body h1, body h3, body h2 {
-  margin: 0;
-}
-body .text1 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-}
-body .menu_card_title {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.09px;
-  text-align: left;
-}
-body .subtitle_text {
-  font-size: 15.04px;
-  font-weight: 300;
-  line-height: 17.63px;
-  text-align: left;
-}
-body .price {
-  font-size: 15.04px;
-  font-weight: 700;
-  line-height: 17.63px;
-  text-align: center;
-}
-body .text6 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-}
-
+/*Importe scss*/
 /***Header index**/
 .header_index {
   display: flex;
@@ -230,16 +162,22 @@ footer a {
 }
 .main_contenaire_resto .menuliste .name_resto {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
   left: 17px;
   font-family: Shrikhand;
   font-size: 19px;
   font-weight: 400;
-  width: 95%;
+  width: 100%;
 }
-.main_contenaire_resto .menuliste .name_resto .heart_placement {
+.main_contenaire_resto .menuliste .name_resto .bloc {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  position: relative;
+}
+.main_contenaire_resto .menuliste .name_resto .bloc .fa-heart {
   position: absolute;
   right: 40px;
   display: flex;
@@ -331,7 +269,7 @@ footer a {
   border-radius: 0px 15px 15px 0px;
   margin-right: -59px;
   position: relative;
-  transition: margin 1s ease;
+  transition: margin 0.5s ease;
 }
 
 .menu_card:hover .menucheck {
@@ -375,7 +313,10 @@ footer a {
   text-align: center;
 }
 .info p {
-  width: 84%;
+  width: 73.4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Roboto;
   font-size: 18px;
   font-weight: 300;
@@ -404,7 +345,7 @@ footer a {
 }
 .fonctionement .fonctionnement-contenair {
   gap: 15px;
-  width: 89%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -416,7 +357,7 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 335px;
+  width: 89%;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
@@ -465,6 +406,7 @@ footer a {
   padding-bottom: 30px;
   width: 100%;
   background-color: var(--backgroundcolor);
+  /*card restaurant index*/
 }
 .restaurant h2 {
   font-size: 24px;
@@ -483,6 +425,7 @@ footer a {
   width: 91%;
 }
 .restaurant .restaurant-contenaire a {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
@@ -493,6 +436,7 @@ footer a {
   border-radius: 15px 15px 15px 15px;
 }
 .restaurant .restaurant-contenaire .restaurant-contenaire-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
@@ -520,10 +464,34 @@ footer a {
   right: 40px;
 }
 .restaurant .cls {
+  /*Coeur plein color */
   background: -webkit-linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
+}
+
+.main_contenaire_card_new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  top: 13px;
+  right: 10px;
+  gap: 0px;
+  opacity: 0px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  background: var(--thirdcolor);
+}
+.main_contenaire_card_new p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  text-align: center;
+  color: rgb(0, 135, 102);
 }
 
 .img-restaurent {
@@ -575,16 +543,12 @@ footer a {
   animation: endload 3s ease forwards;
 }
 .loader p {
+  /*annimation text loader*/
   font-size: 32px;
   animation: gradient-scroll 0.5s linear infinite, text-blur-out 1.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) infinite both;
   background: linear-gradient(to right, var(--maincolor), var(--secondarycolor));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.fa-solid {
-  transition: all 1s ease;
-  opacity: 1;
 }
 
 .loading {
@@ -596,32 +560,59 @@ footer a {
   opacity: 1;
 }
 
-.entre,
-.dessert,
-.plat {
+.fa-solid {
+  /*annimation text heart*/
+  transition: all 0.7s ease;
   opacity: 1;
-  animation: appar 3s ease;
 }
 
-.entre,
-.plat,
-.dessert {
+/*annimation liste menu restaurant*/
+.anim01, .anim02, .anim03, .anim04, .anim05, .anim06, .anim07, .anim08, .anim09, .anim10 {
   opacity: 0;
-  animation: appar 3s ease forwards;
+  animation: appar 2s ease forwards;
 }
 
-.entre {
+.anim01 {
   animation-delay: 0s;
 }
 
-.plat {
-  animation-delay: 1s;
+.anim02 {
+  animation-delay: 0.4s;
 }
 
-.dessert {
+.anim03 {
+  animation-delay: 0.8s;
+}
+
+.anim04 {
+  animation-delay: 1.2s;
+}
+
+.anim05 {
+  animation-delay: 1.6s;
+}
+
+.anim06 {
   animation-delay: 2s;
 }
 
+.anim07 {
+  animation-delay: 2.4s;
+}
+
+.anim08 {
+  animation-delay: 2.8s;
+}
+
+.anim09 {
+  animation-delay: 3.2s;
+}
+
+.anim10 {
+  animation-delay: 3.6s;
+}
+
+/*Keyframe*/
 @keyframes appar {
   0% {
     opacity: 0;
@@ -645,6 +636,7 @@ footer a {
   }
 }
 @-webkit-keyframes text-blur-out {
+  /*annimation text loader*/
   0% {
     -webkit-filter: blur(0.01);
     filter: blur(0.01px);
@@ -710,6 +702,10 @@ footer a {
     flex-direction: row;
     width: 75%;
     justify-content: space-between;
+    gap: 30px;
+  }
+  .fonctionement .fonctionnement-contenair .fonctionnement-contenair-card {
+    width: -29.6666666667px;
   }
   .fonctionement h2 {
     width: 75%;
@@ -740,7 +736,7 @@ footer a {
     justify-content: space-between;
   }
   .restaurant .restaurant-contenaire a {
-    width: calc(50% - 50px);
+    width: 43%;
   }
   .restaurant .restaurant-contenaire a .restaurant-contenaire-card {
     width: 100%;
@@ -755,7 +751,7 @@ footer a {
     width: 60%;
   }
   .main_contenaire_resto .menuliste .name_resto {
-    width: 45%;
+    width: 60%;
   }
   footer {
     height: 114px;
@@ -771,6 +767,79 @@ footer a {
     height: 20px;
     flex-direction: row;
   }
+}
+:root {
+  --maincolor: rgba(147, 86, 220, 1);
+  --gradiante: linear-gradient(193.33deg, var(--maincolor) -11.44%, var(--secondarycolor) 123.93%);
+  --secondarycolor: #FF79DA;
+  --thirdcolor:#99E2D0;
+  --backgroundcolor: rgba(243, 243, 243, 1);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: roboto;
+  /*Bouton de index et page restaurant*/
+  /*Text menu liste restaurant*/
+}
+body .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 218px;
+  height: 50px;
+  background: var(--gradiante);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  color: white;
+}
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body a, body p, body h1, body h3, body h2 {
+  margin: 0;
+}
+body .text1 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+}
+body .menu_card_title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+  text-align: left;
+}
+body .subtitle_text {
+  font-size: 15.04px;
+  font-weight: 300;
+  line-height: 17.63px;
+  text-align: left;
+}
+body .price {
+  font-size: 15.04px;
+  font-weight: 700;
+  line-height: 17.63px;
+  text-align: center;
+}
+body .text6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,8 +11,9 @@
   align-items: center;
   justify-content: center;
   animation: endload 3s ease forwards;
-
+  
   p {
+    /*annimation text loader*/
     font-size: 32px;
     animation:
       gradient-scroll 0.5s linear infinite,
@@ -20,15 +21,8 @@
     background: linear-gradient(to right,var(--maincolor), var(--secondarycolor));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-  }
+    }
 }
-
-.fa-solid {
-  transition: all 1s ease;
-  opacity: 1;
-}
-
 .loading {
   font-size: 72px;  
   background: var(--maincolor);  
@@ -37,34 +31,49 @@
   opacity: unset;
   opacity: 1;
 }
-
-.entre,
-.dessert,
-.plat {
+.fa-solid {
+  /*annimation text heart*/
+  transition: all 0.7s ease;
   opacity: 1;
-  animation: appar 3s ease;
 }
-
-.entre,
-.plat,
-.dessert {
+/*annimation liste menu restaurant*/
+.anim01,.anim02,.anim03,.anim04,.anim05,.anim06,.anim07,.anim08,.anim09,.anim10{
   opacity: 0;
-
-  animation: appar 3s ease forwards;
-  
+  animation: appar 2s  ease forwards;
 }
 
-.entre {
+.anim01 {
   animation-delay: 0s;
 }
-
-.plat {
-  animation-delay: 1s;
+.anim02 {
+  animation-delay: 0.4s;
 }
-
-.dessert {
+.anim03 {
+  animation-delay: 0.8s;
+}
+.anim04 {
+  animation-delay: 1.2s;
+}
+.anim05 {
+  animation-delay: 1.6s;
+}
+.anim06 {
   animation-delay: 2s;
 }
+.anim07 {
+  animation-delay: 2.4s;
+}
+.anim08 {
+  animation-delay: 2.8s;
+}
+.anim09 {
+  animation-delay: 3.2s;
+}
+.anim10 {
+  animation-delay: 3.6s;
+}
+
+/*Keyframe*/
 @keyframes appar {
   0% {
     opacity: 0;
@@ -89,6 +98,7 @@
   }
 }
 @-webkit-keyframes text-blur-out {
+  /*annimation text loader*/
   0% {
     -webkit-filter: blur(0.01);
     filter: blur(0.01px);

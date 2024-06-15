@@ -1,3 +1,13 @@
+
+/*Importe scss*/
+@import "_mixin.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "restaurant.scss";
+@import "index_maincontenair.scss";
+@import "index_listeretaurant.scss";
+@import "animation.scss";
+@import "_mediaquerydesktop.scss";
 @import '_mixin';
 
 :root{
@@ -19,6 +29,7 @@ body{
     margin: 0;
     font-family: roboto;
 
+/*Bouton de index et page restaurant*/
     .btn{
         @include flex-center; 
         border-radius: 25px;
@@ -30,14 +41,12 @@ body{
         font-weight: 500;
         line-height: 18.75px;
         text-align: center;
-        color:white;
-        
+        color:white;        
     }
     
     a{
         text-decoration: none;
-          color: inherit;
-           
+          color: inherit;           
     }
 
     a,p,h1,h3,h2{
@@ -46,20 +55,14 @@ body{
     
 
     .text1{
-        
-
 font-size: 16px;
 font-weight: 500;
 line-height: 18.75px;
 text-align: left;
-
     }
 
-    
-  
-
-    .menu_card_title{
-        
+/*Text menu liste restaurant*/
+    .menu_card_title{        
 font-size: 18px;
 font-weight: 500;
 line-height: 21.09px;
@@ -86,7 +89,7 @@ text-align: center;
     }
 
     .text6{
-        
+        @include flex-center; 
 font-size: 16px;
 font-weight: 500;
 line-height: 18.75px;
@@ -97,11 +100,3 @@ text-align: left;
 }
 
 
-@import "_mixin.scss";
-@import "header.scss";
-@import "footer.scss";
-@import "lanoteenchant.scss";
-@import "index_maincontenair.scss";
-@import "index_listeretaurant.scss";
-@import "animation.scss";
-@import "_mediaquerydesktop.scss";
