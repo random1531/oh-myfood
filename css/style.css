@@ -371,7 +371,7 @@ footer a {
 .fonctionnement-contenair-card .fa-mobile-screen-button,
 .fonctionnement-contenair-card .fa-list-ul,.fa-store  {
   color: #7e7e7e;
-  &:hover::before{
+  &:hover{
     color : var(--maincolor);
 
   }
