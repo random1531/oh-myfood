@@ -369,13 +369,17 @@ footer a {
   gap: 30px;
 }
 .fonctionnement-contenair-card .fa-mobile-screen-button,
-.fonctionnement-contenair-card .fa-list-ul,.fa-store  {
+.fonctionnement-contenair-card .fa-list-ul,
+.fonctionnement-contenair-card .fa-store {
   color: #7e7e7e;
-  &:hover{
-    color : var(--maincolor);
-
-  }
 }
+
+.fonctionnement-contenair-card .fa-mobile-screen-button:hover,
+.fonctionnement-contenair-card .fa-list-ul:hover,
+.fonctionnement-contenair-card .fa-store:hover {
+  color: var(--maincolor);
+}
+
 
 
 .fonctionement .fa-circle {
